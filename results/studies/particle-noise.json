@@ -1,0 +1,65 @@
+{
+  "purpose": "does the particle count move the model answer?",
+  "rows": [
+    {
+      "case": "TEL",
+      "n": 8,
+      "ppc": 50,
+      "particles": 3200,
+      "worst_pd": 0.4777525719154476,
+      "mean_row_nnz": 1.3826923076923077,
+      "mean_diagonal": 0.9232598103835779,
+      "build_s": 75.44722779199947
+    },
+    {
+      "case": "TEL",
+      "n": 8,
+      "ppc": 150,
+      "particles": 9600,
+      "worst_pd": 0.48092747373828215,
+      "mean_row_nnz": 1.5384615384615383,
+      "mean_diagonal": 0.9214770194396571,
+      "build_s": 229.01411266706418
+    },
+    {
+      "case": "TEL",
+      "n": 8,
+      "ppc": 400,
+      "particles": 25600,
+      "worst_pd": 0.47841186189566276,
+      "mean_row_nnz": 1.646153846153846,
+      "mean_diagonal": 0.9168947911397888,
+      "build_s": 618.9377058750251
+    },
+    {
+      "case": "Tank",
+      "n": 8,
+      "ppc": 50,
+      "particles": 3200,
+      "worst_pd": 0.6344818119261366,
+      "mean_row_nnz": 1.5153846153846153,
+      "mean_diagonal": 0.973624519389122,
+      "build_s": 62.811304625007324
+    },
+    {
+      "case": "Tank",
+      "n": 8,
+      "ppc": 150,
+      "particles": 9600,
+      "worst_pd": 0.6384025833545982,
+      "mean_row_nnz": 1.6984615384615385,
+      "mean_diagonal": 0.9635207220374002,
+      "build_s": 186.71354208292905
+    },
+    {
+      "case": "Tank",
+      "n": 8,
+      "ppc": 400,
+      "particles": 25600,
+      "worst_pd": 0.637104974734845,
+      "mean_row_nnz": 1.8369230769230769,
+      "mean_diagonal": 0.9574450013877079,
+      "build_s": 521.9712668339489
+    }
+  ]
+}

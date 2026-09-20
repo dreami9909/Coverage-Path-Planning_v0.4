@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cpp-search-sim"
+version = "0.4.0"
+description = "Stone SPX path optimisation and MAPPO interpretation for cooperative target search"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["matplotlib>=3.8", "numpy>=1.26", "scipy>=1.13"]
+
+[project.optional-dependencies]
+# SPX 정수 master 의 대체 백엔드. 없어도 HiGHS(scipy.optimize.milp)로 돌아간다.
+scip = ["pyscipopt>=5.7,<6"]
+highs = ["highspy>=1.7,<2"]
+
+[project.scripts]
+cpp-research = "cpp_search.runner:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

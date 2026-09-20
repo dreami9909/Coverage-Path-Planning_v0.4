@@ -1,0 +1,61 @@
+{
+  "case": "TEL",
+  "n": 10,
+  "seed": 20260201,
+  "cells": 100,
+  "time_slices": 12,
+  "cell_side_m": 1990.0,
+  "sweep_width_m": 400.0,
+  "dt_s": 5.0,
+  "particles": 120000,
+  "plans": [
+    "plan"
+  ],
+  "cell_model_pd": [
+    0.7283261379575259
+  ],
+  "targets": [
+    {
+      "target": "RELOCATION_HEAVY",
+      "nondetection": [
+        0.364774253547382
+      ],
+      "pd": [
+        0.635225746452618
+      ],
+      "paired_se_vs_best": [
+        0.0
+      ],
+      "best_plan_index": 0,
+      "seconds": 213.77609449997544
+    },
+    {
+      "target": "CONTINUOUS_MOVE",
+      "nondetection": [
+        0.38411881221800004
+      ],
+      "pd": [
+        0.615881187782
+      ],
+      "paired_se_vs_best": [
+        0.0
+      ],
+      "best_plan_index": 0,
+      "seconds": 217.89421262498945
+    },
+    {
+      "target": "STOP_HEAVY",
+      "nondetection": [
+        0.39906996174135256
+      ],
+      "pd": [
+        0.6009300382586474
+      ],
+      "paired_se_vs_best": [
+        0.0
+      ],
+      "best_plan_index": 0,
+      "seconds": 184.98826770903543
+    }
+  ]
+}

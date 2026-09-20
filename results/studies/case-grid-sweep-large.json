@@ -1,0 +1,33 @@
+{
+  "purpose": "per-case grid sweep (ingress 480s + search 600s, minimax over 3 IMM5 behaviours)",
+  "rows": [
+    {
+      "case": "TEL",
+      "n": 16,
+      "cells": 256,
+      "cell_m": 1243.75,
+      "particles": 12800,
+      "T": 19,
+      "ppc": 50.0,
+      "worst_pd": 0.789575599388094,
+      "gap": 0.28828925538393935,
+      "converged": false,
+      "iters": 60,
+      "runtime_s": 4571.021546541015
+    },
+    {
+      "case": "Tank",
+      "n": 16,
+      "cells": 256,
+      "cell_m": 1110.5,
+      "particles": 12800,
+      "T": 21,
+      "ppc": 50.0,
+      "worst_pd": 0.8450961766093499,
+      "gap": 0.32818005098813957,
+      "converged": false,
+      "iters": 60,
+      "runtime_s": 5333.58557629108
+    }
+  ]
+}

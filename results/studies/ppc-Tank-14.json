@@ -1,0 +1,101 @@
+{
+  "terrain_seed": 20260201,
+  "rows": [
+    {
+      "n": 14,
+      "ppc": 25,
+      "particles": 4900,
+      "particle_seed": 20260201,
+      "worst_pd": 0.8419484361009297,
+      "per_target": [
+        0.8689379864262337,
+        0.8475648382973167,
+        0.8419484361009297
+      ],
+      "nonzero_cells": 28,
+      "cells": 196,
+      "fingerprint": "d78e951523f67585ad7b62d4e635d8db174940373c7baf3e7c940cb78d6050b6",
+      "build_s": 64.64934920903761
+    },
+    {
+      "n": 14,
+      "ppc": 25,
+      "particles": 4900,
+      "particle_seed": 20260202,
+      "worst_pd": 0.8397986449620893,
+      "per_target": [
+        0.8652605091792713,
+        0.8484457298400943,
+        0.8397986449620893
+      ],
+      "nonzero_cells": 31,
+      "cells": 196,
+      "fingerprint": "200a695f6fc38d5fcdc3e8f718ecba8f16b92e95971f0629697bdf06941a82bd",
+      "build_s": 65.86131241696421
+    },
+    {
+      "n": 14,
+      "ppc": 25,
+      "particles": 4900,
+      "particle_seed": 20260203,
+      "worst_pd": 0.832082861772419,
+      "per_target": [
+        0.8666792938284644,
+        0.8453032373653057,
+        0.832082861772419
+      ],
+      "nonzero_cells": 30,
+      "cells": 196,
+      "fingerprint": "4967f28ebcc76cc3cce6c404b78a886dbfb684880ea8d740281b03f3f9098755",
+      "build_s": 70.36589745793026
+    },
+    {
+      "n": 14,
+      "ppc": 50,
+      "particles": 9800,
+      "particle_seed": 20260201,
+      "worst_pd": 0.8361370278814731,
+      "per_target": [
+        0.8687102542023242,
+        0.8445378204649598,
+        0.8361370278814731
+      ],
+      "nonzero_cells": 31,
+      "cells": 196,
+      "fingerprint": "8d8a1fa8bc3ea6793be30ec61dccdcc5124824e611a7bcc5f3ebeb8748a64df8",
+      "build_s": 142.71200491697527
+    },
+    {
+      "n": 14,
+      "ppc": 50,
+      "particles": 9800,
+      "particle_seed": 20260202,
+      "worst_pd": 0.8355684515045436,
+      "per_target": [
+        0.8666652114501581,
+        0.8461467323353229,
+        0.8355684515045436
+      ],
+      "nonzero_cells": 33,
+      "cells": 196,
+      "fingerprint": "0ee13e2f86b2367e46636a6b55e58850eadb5c85d5dd949a35cd57e4429c1c6d",
+      "build_s": 139.6079617079813
+    },
+    {
+      "n": 14,
+      "ppc": 50,
+      "particles": 9800,
+      "particle_seed": 20260203,
+      "worst_pd": 0.8405090717420562,
+      "per_target": [
+        0.8642269318483378,
+        0.8467876443609654,
+        0.8405090717420562
+      ],
+      "nonzero_cells": 30,
+      "cells": 196,
+      "fingerprint": "3a5de70e760472c3f10fefd77bf2c56c5b1dc5d613dac1a818d71d49e3c95c29",
+      "build_s": 123.09587429196108
+    }
+  ]
+}

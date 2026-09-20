@@ -1,0 +1,2 @@
+team_centerline_distance_m,footprint_width_m,sweep_width_m,search_area_m2,unique_area_coverage_ceiling,effective_coverage_ceiling,uniform_prior_random_search_detection,uav_count_for_full_coverage,mission_time_s_for_full_coverage,note
+70185.37140452,800.0,348.27024607830845,151297330.62137115,0.3711122786702022,0.16155920576894134,0.14918384325063683,16.167613805449008,1293.4091044359207,"이동시간 0, 중복 0의 낙관 상한이다. 실측 면적탐색률이 이 값의 절반 근처면 계획기는 잘 하고 있는 것이고, 이 값 자체가 낮으면 문제는 계획기가 아니라 자원 배정이다. random_search_detection_ceiling 은 노력을 무작위로 뿌렸을 때의 탐지확률로, 계획기는 이 값을 넘어야 의미가 있다."

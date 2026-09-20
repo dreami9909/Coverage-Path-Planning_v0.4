@@ -1,0 +1,4 @@
+grid,cell_count,time_slice_count,required_relative_gap,worst_relative_gap,median_relative_gap,certified_seed_count,seed_count,passed,mean_runtime_s
+reduced-4x4,16,5,0.01,1.652262412370124e-06,1.8167831042139178e-16,19,20,True,2.166759670805186
+reduced-5x5,25,5,0.01,2.2229728339973548e-06,2.1964534466039075e-15,19,20,True,18.131015731336085
+operational-polar,288,8,0.01,1.0,1.0,0,20,False,87.29816734800116

@@ -1,0 +1,119 @@
+{
+  "purpose": "objective function vs Monte-Carlo simulation of target motion",
+  "cases": [
+    {
+      "case": "Tank",
+      "n": 8,
+      "seed": 20260201,
+      "fingerprint": "66c1fe77d1f3ea18f71ab725902f5072b4d9bb903f38ba8a1cc19a9e9ea67a86",
+      "cells": 64,
+      "time_slices": 11,
+      "plan_source": "results/studies/occupancy-1.json",
+      "scope": "재귀식의 대수와 hazard 조립을 검증한다. 전이행렬과 사전분포는 모형의 입력으로 받아 쓰며 여기서 독립 재유도하지 않는다.",
+      "rows": [
+        {
+          "target": "Tank-nominal/MANEUVER_HEAVY",
+          "pd_analytic": 0.7542393151129534,
+          "nondetection_analytic": 0.2457606848870466,
+          "mc_trajectory": 0.2459765,
+          "mc_trajectory_M": 2000000,
+          "mc_trajectory_sigma": 0.0003044358476353404,
+          "mc_trajectory_sigmas": 0.7089017756275693,
+          "mc_counts": 0.24578039,
+          "mc_counts_M": 100000000,
+          "mc_counts_sigma": 4.3053730459844754e-05,
+          "mc_counts_sigmas": 0.45768654058342606,
+          "seconds_trajectory": 2.319673708989285,
+          "seconds_counts": 0.001021082978695631
+        },
+        {
+          "target": "Tank-nominal/STOP_HEAVY",
+          "pd_analytic": 0.7474036436253522,
+          "nondetection_analytic": 0.25259635637464783,
+          "mc_trajectory": 0.2525245,
+          "mc_trajectory_M": 2000000,
+          "mc_trajectory_sigma": 0.00030723886238633594,
+          "mc_trajectory_sigmas": 0.23387788279691687,
+          "mc_counts": 0.25259438,
+          "mc_counts_M": 100000000,
+          "mc_counts_sigma": 4.3450136607483727e-05,
+          "mc_counts_sigmas": 0.045486039910102395,
+          "seconds_trajectory": 2.2615551659837365,
+          "seconds_counts": 0.0009627080289646983
+        },
+        {
+          "target": "Tank-nominal/CONTINUOUS_MOVE",
+          "pd_analytic": 0.7476234616541619,
+          "nondetection_analytic": 0.25237653834583806,
+          "mc_trajectory": 0.2526485,
+          "mc_trajectory_M": 2000000,
+          "mc_trajectory_sigma": 0.0003071503062332917,
+          "mc_trajectory_sigmas": 0.8854350741078845,
+          "mc_counts": 0.25242943,
+          "mc_counts_M": 100000000,
+          "mc_counts_sigma": 4.343761287621706e-05,
+          "mc_counts_sigmas": 1.2176464280546457,
+          "seconds_trajectory": 2.3833906669169664,
+          "seconds_counts": 0.0011769159464165568
+        }
+      ]
+    },
+    {
+      "case": "TEL",
+      "n": 10,
+      "seed": 20260201,
+      "fingerprint": "18fd6ce7cacd1541e7ae57ff3e5975df23e2016a4b12cbdb8a1357bb3e834376",
+      "cells": 100,
+      "time_slices": 12,
+      "plan_source": "results/studies/anchor-TEL-10-20260201.json",
+      "scope": "재귀식의 대수와 hazard 조립을 검증한다. 전이행렬과 사전분포는 모형의 입력으로 받아 쓰며 여기서 독립 재유도하지 않는다.",
+      "rows": [
+        {
+          "target": "TEL-nominal/RELOCATION_HEAVY",
+          "pd_analytic": 0.7283261379575259,
+          "nondetection_analytic": 0.2716738620424741,
+          "mc_trajectory": 0.272155,
+          "mc_trajectory_M": 2000000,
+          "mc_trajectory_sigma": 0.0003145371001371705,
+          "mc_trajectory_sigmas": 1.529669973163837,
+          "mc_counts": 0.27168414,
+          "mc_counts_M": 100000000,
+          "mc_counts_sigma": 4.448226328834908e-05,
+          "mc_counts_sigmas": 0.23105743202115614,
+          "seconds_trajectory": 3.799883665982634,
+          "seconds_counts": 0.0016369579825550318
+        },
+        {
+          "target": "TEL-nominal/CONTINUOUS_MOVE",
+          "pd_analytic": 0.7384298490020925,
+          "nondetection_analytic": 0.2615701509979075,
+          "mc_trajectory": 0.262173,
+          "mc_trajectory_M": 2000000,
+          "mc_trajectory_sigma": 0.0003107661557383939,
+          "mc_trajectory_sigmas": 1.9398798452171018,
+          "mc_counts": 0.26158784,
+          "mc_counts_M": 100000000,
+          "mc_counts_sigma": 4.394897121717861e-05,
+          "mc_counts_sigmas": 0.40248956011105796,
+          "seconds_trajectory": 3.7159870830364525,
+          "seconds_counts": 0.001571832923218608
+        },
+        {
+          "target": "TEL-nominal/STOP_HEAVY",
+          "pd_analytic": 0.7289633417493722,
+          "nondetection_analytic": 0.27103665825062784,
+          "mc_trajectory": 0.270904,
+          "mc_trajectory_M": 2000000,
+          "mc_trajectory_sigma": 0.00031430541526909794,
+          "mc_trajectory_sigmas": 0.42206797650712413,
+          "mc_counts": 0.27102488,
+          "mc_counts_M": 100000000,
+          "mc_counts_sigma": 4.4449498100086595e-05,
+          "mc_counts_sigmas": 0.2649805089203286,
+          "seconds_trajectory": 3.689775374950841,
+          "seconds_counts": 0.00132395897526294
+        }
+      ]
+    }
+  ]
+}

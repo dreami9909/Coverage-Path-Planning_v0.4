@@ -1,0 +1,1563 @@
+{
+  "study": "budget-allocation",
+  "question": "같은 총예산을 어떻게 쪼개느냐가 인증을 가르는가",
+  "grid": "10x10",
+  "total_budget_s": 3600.0,
+  "splits_iterations": [
+    6,
+    12
+  ],
+  "rows": [
+    {
+      "case": "Tank",
+      "grid": "10x10",
+      "cells": 100,
+      "cell_m": 1776.8,
+      "time_slices": 13,
+      "particles": 5000,
+      "seed": 20260201,
+      "fingerprint": "3f3fbebb968ea8c03095086908b3cf61f9aa793b623e5a46674aab750877590a",
+      "budget": {
+        "master_time_limit_s": 600.0,
+        "max_iterations": 6
+      },
+      "worst_target_detection_probability": 0.7919899855812059,
+      "relative_optimality_gap": 0.07678391591699062,
+      "lower_bound_nondetection": 0.1920381909617694,
+      "upper_bound_nondetection": 0.2080100144187941,
+      "certified": false,
+      "iterations": 6,
+      "runtime_s": 3631.4339149579173,
+      "incumbent_source": "master-iteration-6",
+      "warm_start_nondetection": 0.2921650311456687,
+      "master_improvement": 0.08415501672687462,
+      "master_time_limit_hits": 5,
+      "assignments": [
+        [
+          57,
+          56,
+          56,
+          56,
+          56,
+          57,
+          57,
+          57,
+          57,
+          57,
+          67,
+          68,
+          68
+        ],
+        [
+          56,
+          55,
+          45,
+          45,
+          45,
+          45,
+          45,
+          45,
+          55,
+          55,
+          56,
+          56,
+          56
+        ],
+        [
+          64,
+          54,
+          55,
+          55,
+          55,
+          56,
+          56,
+          56,
+          56,
+          56,
+          57,
+          57,
+          57
+        ],
+        [
+          53,
+          43,
+          33,
+          33,
+          33,
+          23,
+          22,
+          22,
+          22,
+          22,
+          22,
+          22,
+          22
+        ],
+        [
+          34,
+          44,
+          34,
+          34,
+          34,
+          33,
+          33,
+          33,
+          33,
+          34,
+          33,
+          23,
+          23
+        ],
+        [
+          46,
+          45,
+          44,
+          44,
+          44,
+          34,
+          44,
+          44,
+          45,
+          44,
+          34,
+          34,
+          34
+        ]
+      ],
+      "start_cells": [
+        57,
+        66,
+        63,
+        52,
+        33,
+        36
+      ],
+      "master_status_history": [
+        {
+          "iteration": -1,
+          "phase": "relaxation",
+          "status": "optimal",
+          "seconds": 48.56659745902289
+        },
+        {
+          "iteration": -2,
+          "phase": "relaxation",
+          "status": "optimal",
+          "seconds": 27.989176249946468
+        },
+        {
+          "iteration": -3,
+          "phase": "relaxation",
+          "status": "optimal",
+          "seconds": 47.364708540961146
+        },
+        {
+          "iteration": 1,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 600.0496292499593
+        },
+        {
+          "iteration": 2,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 600.0759796249913
+        },
+        {
+          "iteration": 3,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 600.0599727910012
+        },
+        {
+          "iteration": 4,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 600.0547831249423
+        },
+        {
+          "iteration": 5,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 600.0550244159531
+        },
+        {
+          "iteration": 6,
+          "phase": "master",
+          "status": "optimal",
+          "seconds": 405.9597768749809
+        }
+      ],
+      "bound_history": [
+        {
+          "iteration": 1,
+          "lower_bound_nondetection": 0.19154907619976944,
+          "upper_bound_nondetection": 0.2921650311456687,
+          "relative_optimality_gap": 0.34438055283807667
+        },
+        {
+          "iteration": 2,
+          "lower_bound_nondetection": 0.1916090916062825,
+          "upper_bound_nondetection": 0.2921650311456687,
+          "relative_optimality_gap": 0.34417513672007743
+        },
+        {
+          "iteration": 3,
+          "lower_bound_nondetection": 0.19168830274728094,
+          "upper_bound_nondetection": 0.2921650311456687,
+          "relative_optimality_gap": 0.3439040189183069
+        },
+        {
+          "iteration": 4,
+          "lower_bound_nondetection": 0.19175887500085356,
+          "upper_bound_nondetection": 0.2921650311456687,
+          "relative_optimality_gap": 0.343662469636054
+        },
+        {
+          "iteration": 5,
+          "lower_bound_nondetection": 0.19185780438307048,
+          "upper_bound_nondetection": 0.2921650311456687,
+          "relative_optimality_gap": 0.3433238617546488
+        },
+        {
+          "iteration": 6,
+          "lower_bound_nondetection": 0.1920381909617694,
+          "upper_bound_nondetection": 0.2080100144187941,
+          "relative_optimality_gap": 0.07678391591699062
+        }
+      ],
+      "build_s": 97.67587887495756,
+      "terrain_weighting": true,
+      "total_budget_s": 3600.0
+    },
+    {
+      "case": "Tank",
+      "grid": "10x10",
+      "cells": 100,
+      "cell_m": 1776.8,
+      "time_slices": 13,
+      "particles": 5000,
+      "seed": 20260202,
+      "fingerprint": "19f215cd59a489474bdf4bec2845c9576079d1bca0e02d79e8caa9007b0632c2",
+      "budget": {
+        "master_time_limit_s": 600.0,
+        "max_iterations": 6
+      },
+      "worst_target_detection_probability": 0.7635861521565355,
+      "relative_optimality_gap": 0.33363554463493,
+      "lower_bound_nondetection": 0.15753778495897075,
+      "upper_bound_nondetection": 0.2364138478434645,
+      "certified": false,
+      "iterations": 6,
+      "runtime_s": 3816.3118940839777,
+      "incumbent_source": "warm-start",
+      "warm_start_nondetection": 0.2364138478434645,
+      "master_improvement": 0.0,
+      "master_time_limit_hits": 6,
+      "assignments": [
+        [
+          56,
+          55,
+          45,
+          55,
+          65,
+          64,
+          64,
+          64,
+          74,
+          74,
+          74,
+          74,
+          74
+        ],
+        [
+          65,
+          65,
+          55,
+          54,
+          64,
+          54,
+          54,
+          54,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        [
+          64,
+          54,
+          44,
+          45,
+          35,
+          35,
+          35,
+          35,
+          35,
+          45,
+          35,
+          45,
+          45
+        ],
+        [
+          53,
+          43,
+          33,
+          34,
+          44,
+          45,
+          55,
+          65,
+          65,
+          65,
+          55,
+          55,
+          54
+        ],
+        [
+          34,
+          35,
+          35,
+          35,
+          25,
+          25,
+          25,
+          25,
+          25,
+          35,
+          25,
+          15,
+          25
+        ],
+        [
+          35,
+          45,
+          46,
+          56,
+          55,
+          65,
+          65,
+          75,
+          75,
+          75,
+          65,
+          65,
+          55
+        ]
+      ],
+      "start_cells": [
+        57,
+        66,
+        63,
+        52,
+        33,
+        36
+      ],
+      "master_status_history": [
+        {
+          "iteration": -1,
+          "phase": "relaxation",
+          "status": "optimal",
+          "seconds": 43.95908887509722
+        },
+        {
+          "iteration": -2,
+          "phase": "relaxation",
+          "status": "optimal",
+          "seconds": 42.97248841589317
+        },
+        {
+          "iteration": -3,
+          "phase": "relaxation",
+          "status": "optimal",
+          "seconds": 72.41525916696992
+        },
+        {
+          "iteration": 1,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 600.0317019589711
+        },
+        {
+          "iteration": 2,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 600.0294449579669
+        },
+        {
+          "iteration": 3,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 600.0577712079976
+        },
+        {
+          "iteration": 4,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 600.0504329159157
+        },
+        {
+          "iteration": 5,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 600.0339851250174
+        },
+        {
+          "iteration": 6,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 600.0429471250391
+        }
+      ],
+      "bound_history": [
+        {
+          "iteration": 1,
+          "lower_bound_nondetection": 0.1575363024028831,
+          "upper_bound_nondetection": 0.2364138478434645,
+          "relative_optimality_gap": 0.33364181565543566
+        },
+        {
+          "iteration": 2,
+          "lower_bound_nondetection": 0.15753630240288416,
+          "upper_bound_nondetection": 0.2364138478434645,
+          "relative_optimality_gap": 0.3336418156554312
+        },
+        {
+          "iteration": 3,
+          "lower_bound_nondetection": 0.15753778495897075,
+          "upper_bound_nondetection": 0.2364138478434645,
+          "relative_optimality_gap": 0.33363554463493
+        },
+        {
+          "iteration": 4,
+          "lower_bound_nondetection": 0.15753778495897075,
+          "upper_bound_nondetection": 0.2364138478434645,
+          "relative_optimality_gap": 0.33363554463493
+        },
+        {
+          "iteration": 5,
+          "lower_bound_nondetection": 0.15753778495897075,
+          "upper_bound_nondetection": 0.2364138478434645,
+          "relative_optimality_gap": 0.33363554463493
+        },
+        {
+          "iteration": 6,
+          "lower_bound_nondetection": 0.15753778495897075,
+          "upper_bound_nondetection": 0.2364138478434645,
+          "relative_optimality_gap": 0.33363554463493
+        }
+      ],
+      "build_s": 53.124220874975435,
+      "terrain_weighting": true,
+      "total_budget_s": 3600.0
+    },
+    {
+      "case": "Tank",
+      "grid": "10x10",
+      "cells": 100,
+      "cell_m": 1776.8,
+      "time_slices": 13,
+      "particles": 5000,
+      "seed": 20260203,
+      "fingerprint": "0c70c5ea216224cc13926e0f24950fa9a6e286296e2d3097fff246737f8a0080",
+      "budget": {
+        "master_time_limit_s": 600.0,
+        "max_iterations": 6
+      },
+      "worst_target_detection_probability": 0.7739424442713547,
+      "relative_optimality_gap": 0.23992820296449208,
+      "lower_bound_nondetection": 0.17181997261612592,
+      "upper_bound_nondetection": 0.2260575557286453,
+      "certified": false,
+      "iterations": 6,
+      "runtime_s": 3638.059548750054,
+      "incumbent_source": "warm-start",
+      "warm_start_nondetection": 0.2260575557286453,
+      "master_improvement": 0.0,
+      "master_time_limit_hits": 6,
+      "assignments": [
+        [
+          56,
+          55,
+          54,
+          64,
+          64,
+          64,
+          64,
+          64,
+          54,
+          44,
+          34,
+          34,
+          34
+        ],
+        [
+          65,
+          64,
+          64,
+          74,
+          74,
+          74,
+          74,
+          74,
+          64,
+          54,
+          64,
+          64,
+          74
+        ],
+        [
+          64,
+          54,
+          44,
+          54,
+          54,
+          54,
+          44,
+          34,
+          24,
+          24,
+          24,
+          24,
+          24
+        ],
+        [
+          53,
+          63,
+          63,
+          63,
+          53,
+          43,
+          33,
+          23,
+          23,
+          23,
+          23,
+          23,
+          23
+        ],
+        [
+          34,
+          44,
+          34,
+          44,
+          34,
+          34,
+          34,
+          24,
+          14,
+          14,
+          14,
+          14,
+          14
+        ],
+        [
+          46,
+          56,
+          55,
+          45,
+          44,
+          44,
+          45,
+          44,
+          34,
+          34,
+          35,
+          45,
+          44
+        ]
+      ],
+      "start_cells": [
+        57,
+        66,
+        63,
+        52,
+        33,
+        36
+      ],
+      "master_status_history": [
+        {
+          "iteration": -1,
+          "phase": "relaxation",
+          "status": "optimal",
+          "seconds": 73.94844545796514
+        },
+        {
+          "iteration": -2,
+          "phase": "relaxation",
+          "status": "optimal",
+          "seconds": 39.333410333958454
+        },
+        {
+          "iteration": -3,
+          "phase": "relaxation",
+          "status": "optimal",
+          "seconds": 31.894622207968496
+        },
+        {
+          "iteration": 1,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 427.5352037920384
+        },
+        {
+          "iteration": 2,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 600.0498112910427
+        },
+        {
+          "iteration": 3,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 600.0319029580569
+        },
+        {
+          "iteration": 4,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 600.0454997919733
+        },
+        {
+          "iteration": 5,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 600.0397082089912
+        },
+        {
+          "iteration": 6,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 600.0493181250058
+        }
+      ],
+      "bound_history": [
+        {
+          "iteration": 1,
+          "lower_bound_nondetection": 0.17175836331534453,
+          "upper_bound_nondetection": 0.2260575557286453,
+          "relative_optimality_gap": 0.24020074108241876
+        },
+        {
+          "iteration": 2,
+          "lower_bound_nondetection": 0.17175836331534453,
+          "upper_bound_nondetection": 0.2260575557286453,
+          "relative_optimality_gap": 0.24020074108241876
+        },
+        {
+          "iteration": 3,
+          "lower_bound_nondetection": 0.17180985536625962,
+          "upper_bound_nondetection": 0.2260575557286453,
+          "relative_optimality_gap": 0.23997295815895434
+        },
+        {
+          "iteration": 4,
+          "lower_bound_nondetection": 0.17180985536625962,
+          "upper_bound_nondetection": 0.2260575557286453,
+          "relative_optimality_gap": 0.23997295815895434
+        },
+        {
+          "iteration": 5,
+          "lower_bound_nondetection": 0.17180985536625962,
+          "upper_bound_nondetection": 0.2260575557286453,
+          "relative_optimality_gap": 0.23997295815895434
+        },
+        {
+          "iteration": 6,
+          "lower_bound_nondetection": 0.17181997261612592,
+          "upper_bound_nondetection": 0.2260575557286453,
+          "relative_optimality_gap": 0.23992820296449208
+        }
+      ],
+      "build_s": 61.5796701250365,
+      "terrain_weighting": true,
+      "total_budget_s": 3600.0
+    },
+    {
+      "case": "Tank",
+      "grid": "10x10",
+      "cells": 100,
+      "cell_m": 1776.8,
+      "time_slices": 13,
+      "particles": 5000,
+      "seed": 20260201,
+      "fingerprint": "3f3fbebb968ea8c03095086908b3cf61f9aa793b623e5a46674aab750877590a",
+      "budget": {
+        "master_time_limit_s": 300.0,
+        "max_iterations": 12
+      },
+      "worst_target_detection_probability": 0.794020103733971,
+      "relative_optimality_gap": 0.050371839041501346,
+      "lower_bound_nondetection": 0.1956043100855314,
+      "upper_bound_nondetection": 0.20597989626602894,
+      "certified": false,
+      "iterations": 12,
+      "runtime_s": 3777.8344761671033,
+      "incumbent_source": "master-iteration-11",
+      "warm_start_nondetection": 0.2921650311456687,
+      "master_improvement": 0.08618513487963977,
+      "master_time_limit_hits": 12,
+      "assignments": [
+        [
+          57,
+          56,
+          56,
+          56,
+          57,
+          57,
+          57,
+          57,
+          57,
+          67,
+          68,
+          68,
+          68
+        ],
+        [
+          56,
+          55,
+          45,
+          45,
+          45,
+          45,
+          45,
+          45,
+          45,
+          44,
+          44,
+          44,
+          44
+        ],
+        [
+          64,
+          64,
+          54,
+          44,
+          44,
+          44,
+          44,
+          34,
+          34,
+          34,
+          34,
+          33,
+          34
+        ],
+        [
+          53,
+          54,
+          55,
+          55,
+          56,
+          56,
+          56,
+          56,
+          56,
+          56,
+          56,
+          56,
+          56
+        ],
+        [
+          34,
+          44,
+          34,
+          33,
+          33,
+          33,
+          23,
+          22,
+          22,
+          22,
+          22,
+          22,
+          22
+        ],
+        [
+          46,
+          45,
+          44,
+          34,
+          34,
+          34,
+          33,
+          33,
+          33,
+          33,
+          23,
+          23,
+          33
+        ]
+      ],
+      "start_cells": [
+        57,
+        66,
+        63,
+        52,
+        33,
+        36
+      ],
+      "master_status_history": [
+        {
+          "iteration": -1,
+          "phase": "relaxation",
+          "status": "optimal",
+          "seconds": 37.31794520793483
+        },
+        {
+          "iteration": -2,
+          "phase": "relaxation",
+          "status": "optimal",
+          "seconds": 21.378849916975014
+        },
+        {
+          "iteration": -3,
+          "phase": "relaxation",
+          "status": "optimal",
+          "seconds": 34.48882383399177
+        },
+        {
+          "iteration": 1,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.0349811250344
+        },
+        {
+          "iteration": 2,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.0321423340356
+        },
+        {
+          "iteration": 3,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.0408144160174
+        },
+        {
+          "iteration": 4,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.0337167920079
+        },
+        {
+          "iteration": 5,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.0352848750772
+        },
+        {
+          "iteration": 6,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.061685667024
+        },
+        {
+          "iteration": 7,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.0551720838994
+        },
+        {
+          "iteration": 8,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.06031458301004
+        },
+        {
+          "iteration": 9,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.048211874906
+        },
+        {
+          "iteration": 10,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.0675339580048
+        },
+        {
+          "iteration": 11,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.06242858304176
+        },
+        {
+          "iteration": 12,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.06546058296226
+        }
+      ],
+      "bound_history": [
+        {
+          "iteration": 1,
+          "lower_bound_nondetection": 0.1915377957010159,
+          "upper_bound_nondetection": 0.2921650311456687,
+          "relative_optimality_gap": 0.3444191628616969
+        },
+        {
+          "iteration": 2,
+          "lower_bound_nondetection": 0.19153779570101764,
+          "upper_bound_nondetection": 0.2921650311456687,
+          "relative_optimality_gap": 0.34441916286169094
+        },
+        {
+          "iteration": 3,
+          "lower_bound_nondetection": 0.19155017691944792,
+          "upper_bound_nondetection": 0.2921650311456687,
+          "relative_optimality_gap": 0.3443767853794107
+        },
+        {
+          "iteration": 4,
+          "lower_bound_nondetection": 0.1915634086605661,
+          "upper_bound_nondetection": 0.2921650311456687,
+          "relative_optimality_gap": 0.3443314967934828
+        },
+        {
+          "iteration": 5,
+          "lower_bound_nondetection": 0.1916054904190199,
+          "upper_bound_nondetection": 0.2921650311456687,
+          "relative_optimality_gap": 0.34418746258689487
+        },
+        {
+          "iteration": 6,
+          "lower_bound_nondetection": 0.1916054904190199,
+          "upper_bound_nondetection": 0.2921650311456687,
+          "relative_optimality_gap": 0.34418746258689487
+        },
+        {
+          "iteration": 7,
+          "lower_bound_nondetection": 0.1916369268957198,
+          "upper_bound_nondetection": 0.2083085796516395,
+          "relative_optimality_gap": 0.08003344261575886
+        },
+        {
+          "iteration": 8,
+          "lower_bound_nondetection": 0.19329929210518967,
+          "upper_bound_nondetection": 0.2083085796516395,
+          "relative_optimality_gap": 0.07205314140949118
+        },
+        {
+          "iteration": 9,
+          "lower_bound_nondetection": 0.19330206880136777,
+          "upper_bound_nondetection": 0.2083085796516395,
+          "relative_optimality_gap": 0.07203981168402937
+        },
+        {
+          "iteration": 10,
+          "lower_bound_nondetection": 0.19358414310388186,
+          "upper_bound_nondetection": 0.2083085796516395,
+          "relative_optimality_gap": 0.07068569413886723
+        },
+        {
+          "iteration": 11,
+          "lower_bound_nondetection": 0.19358414310388186,
+          "upper_bound_nondetection": 0.20597989626602894,
+          "relative_optimality_gap": 0.060179432006983884
+        },
+        {
+          "iteration": 12,
+          "lower_bound_nondetection": 0.1956043100855314,
+          "upper_bound_nondetection": 0.20597989626602894,
+          "relative_optimality_gap": 0.050371839041501346
+        }
+      ],
+      "build_s": 79.31161904206965,
+      "terrain_weighting": true,
+      "total_budget_s": 3600.0
+    },
+    {
+      "case": "Tank",
+      "grid": "10x10",
+      "cells": 100,
+      "cell_m": 1776.8,
+      "time_slices": 13,
+      "particles": 5000,
+      "seed": 20260202,
+      "fingerprint": "19f215cd59a489474bdf4bec2845c9576079d1bca0e02d79e8caa9007b0632c2",
+      "budget": {
+        "master_time_limit_s": 300.0,
+        "max_iterations": 12
+      },
+      "worst_target_detection_probability": 0.821062420105436,
+      "relative_optimality_gap": 0.10024825289503085,
+      "lower_bound_nondetection": 0.16099940013286895,
+      "upper_bound_nondetection": 0.178937579894564,
+      "certified": false,
+      "iterations": 12,
+      "runtime_s": 4001.0087539999513,
+      "incumbent_source": "master-iteration-11",
+      "warm_start_nondetection": 0.2364138478434645,
+      "master_improvement": 0.05747626794890051,
+      "master_time_limit_hits": 12,
+      "assignments": [
+        [
+          56,
+          55,
+          45,
+          44,
+          54,
+          64,
+          54,
+          54,
+          64,
+          65,
+          64,
+          64,
+          64
+        ],
+        [
+          65,
+          65,
+          55,
+          45,
+          45,
+          55,
+          65,
+          64,
+          74,
+          64,
+          74,
+          74,
+          74
+        ],
+        [
+          64,
+          64,
+          54,
+          55,
+          65,
+          65,
+          64,
+          74,
+          84,
+          84,
+          84,
+          84,
+          84
+        ],
+        [
+          53,
+          54,
+          44,
+          54,
+          55,
+          54,
+          55,
+          55,
+          55,
+          45,
+          35,
+          45,
+          55
+        ],
+        [
+          34,
+          35,
+          25,
+          25,
+          25,
+          35,
+          35,
+          35,
+          25,
+          15,
+          15,
+          15,
+          15
+        ],
+        [
+          35,
+          45,
+          35,
+          35,
+          35,
+          45,
+          45,
+          45,
+          35,
+          35,
+          25,
+          25,
+          35
+        ]
+      ],
+      "start_cells": [
+        57,
+        66,
+        63,
+        52,
+        33,
+        36
+      ],
+      "master_status_history": [
+        {
+          "iteration": -1,
+          "phase": "relaxation",
+          "status": "optimal",
+          "seconds": 82.38469662494026
+        },
+        {
+          "iteration": -2,
+          "phase": "relaxation",
+          "status": "optimal",
+          "seconds": 76.9817904169904
+        },
+        {
+          "iteration": -3,
+          "phase": "relaxation",
+          "status": "optimal",
+          "seconds": 132.94111812498886
+        },
+        {
+          "iteration": 1,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.0660139580723
+        },
+        {
+          "iteration": 2,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.088131000055
+        },
+        {
+          "iteration": 3,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.1095378329046
+        },
+        {
+          "iteration": 4,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.0866136669647
+        },
+        {
+          "iteration": 5,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.0488367500948
+        },
+        {
+          "iteration": 6,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.0501897500362
+        },
+        {
+          "iteration": 7,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.0659910000395
+        },
+        {
+          "iteration": 8,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.1239217920229
+        },
+        {
+          "iteration": 9,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.06716508290265
+        },
+        {
+          "iteration": 10,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.0595402920153
+        },
+        {
+          "iteration": 11,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.037641666946
+        },
+        {
+          "iteration": 12,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.03265620802995
+        }
+      ],
+      "bound_history": [
+        {
+          "iteration": 1,
+          "lower_bound_nondetection": 0.15753630240288294,
+          "upper_bound_nondetection": 0.2364138478434645,
+          "relative_optimality_gap": 0.3336418156554364
+        },
+        {
+          "iteration": 2,
+          "lower_bound_nondetection": 0.15753630240288352,
+          "upper_bound_nondetection": 0.2364138478434645,
+          "relative_optimality_gap": 0.3336418156554339
+        },
+        {
+          "iteration": 3,
+          "lower_bound_nondetection": 0.15753630240290178,
+          "upper_bound_nondetection": 0.2364138478434645,
+          "relative_optimality_gap": 0.33364181565535667
+        },
+        {
+          "iteration": 4,
+          "lower_bound_nondetection": 0.15754652741714706,
+          "upper_bound_nondetection": 0.2364138478434645,
+          "relative_optimality_gap": 0.3335985651675424
+        },
+        {
+          "iteration": 5,
+          "lower_bound_nondetection": 0.1575465274171471,
+          "upper_bound_nondetection": 0.2364138478434645,
+          "relative_optimality_gap": 0.33359856516754227
+        },
+        {
+          "iteration": 6,
+          "lower_bound_nondetection": 0.1575465274171471,
+          "upper_bound_nondetection": 0.2364138478434645,
+          "relative_optimality_gap": 0.33359856516754227
+        },
+        {
+          "iteration": 7,
+          "lower_bound_nondetection": 0.1575465274171471,
+          "upper_bound_nondetection": 0.2364138478434645,
+          "relative_optimality_gap": 0.33359856516754227
+        },
+        {
+          "iteration": 8,
+          "lower_bound_nondetection": 0.1575465274171471,
+          "upper_bound_nondetection": 0.2364138478434645,
+          "relative_optimality_gap": 0.33359856516754227
+        },
+        {
+          "iteration": 9,
+          "lower_bound_nondetection": 0.1575465274171471,
+          "upper_bound_nondetection": 0.2364138478434645,
+          "relative_optimality_gap": 0.33359856516754227
+        },
+        {
+          "iteration": 10,
+          "lower_bound_nondetection": 0.1575465274171471,
+          "upper_bound_nondetection": 0.2364138478434645,
+          "relative_optimality_gap": 0.33359856516754227
+        },
+        {
+          "iteration": 11,
+          "lower_bound_nondetection": 0.15754652741714714,
+          "upper_bound_nondetection": 0.178937579894564,
+          "relative_optimality_gap": 0.11954477360217554
+        },
+        {
+          "iteration": 12,
+          "lower_bound_nondetection": 0.16099940013286895,
+          "upper_bound_nondetection": 0.178937579894564,
+          "relative_optimality_gap": 0.10024825289503085
+        }
+      ],
+      "build_s": 100.542505334015,
+      "terrain_weighting": true,
+      "total_budget_s": 3600.0
+    },
+    {
+      "case": "Tank",
+      "grid": "10x10",
+      "cells": 100,
+      "cell_m": 1776.8,
+      "time_slices": 13,
+      "particles": 5000,
+      "seed": 20260203,
+      "fingerprint": "0c70c5ea216224cc13926e0f24950fa9a6e286296e2d3097fff246737f8a0080",
+      "budget": {
+        "master_time_limit_s": 300.0,
+        "max_iterations": 12
+      },
+      "worst_target_detection_probability": 0.8184234246745248,
+      "relative_optimality_gap": 0.03850500430883747,
+      "lower_bound_nondetection": 0.17458496851018382,
+      "upper_bound_nondetection": 0.1815765753254752,
+      "certified": false,
+      "iterations": 12,
+      "runtime_s": 3852.659941083053,
+      "incumbent_source": "master-iteration-7",
+      "warm_start_nondetection": 0.2260575557286453,
+      "master_improvement": 0.04448098040317011,
+      "master_time_limit_hits": 12,
+      "assignments": [
+        [
+          57,
+          56,
+          55,
+          45,
+          45,
+          44,
+          44,
+          34,
+          34,
+          44,
+          54,
+          54,
+          54
+        ],
+        [
+          56,
+          55,
+          45,
+          44,
+          34,
+          34,
+          34,
+          24,
+          24,
+          34,
+          34,
+          34,
+          24
+        ],
+        [
+          64,
+          64,
+          64,
+          74,
+          64,
+          74,
+          74,
+          74,
+          74,
+          74,
+          84,
+          84,
+          84
+        ],
+        [
+          53,
+          54,
+          54,
+          64,
+          54,
+          64,
+          64,
+          64,
+          64,
+          64,
+          74,
+          74,
+          74
+        ],
+        [
+          34,
+          34,
+          34,
+          34,
+          24,
+          24,
+          24,
+          23,
+          23,
+          23,
+          24,
+          23,
+          23
+        ],
+        [
+          46,
+          45,
+          44,
+          54,
+          44,
+          54,
+          54,
+          44,
+          44,
+          54,
+          64,
+          64,
+          64
+        ]
+      ],
+      "start_cells": [
+        57,
+        66,
+        63,
+        52,
+        33,
+        36
+      ],
+      "master_status_history": [
+        {
+          "iteration": -1,
+          "phase": "relaxation",
+          "status": "optimal",
+          "seconds": 87.5480287920218
+        },
+        {
+          "iteration": -2,
+          "phase": "relaxation",
+          "status": "optimal",
+          "seconds": 46.73195379204117
+        },
+        {
+          "iteration": -3,
+          "phase": "relaxation",
+          "status": "optimal",
+          "seconds": 37.688614832935855
+        },
+        {
+          "iteration": 1,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.03783591708634
+        },
+        {
+          "iteration": 2,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.03414712497033
+        },
+        {
+          "iteration": 3,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.0400236250134
+        },
+        {
+          "iteration": 4,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.05157066707034
+        },
+        {
+          "iteration": 5,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.0349350410979
+        },
+        {
+          "iteration": 6,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.03554529102985
+        },
+        {
+          "iteration": 7,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.0364303330425
+        },
+        {
+          "iteration": 8,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.03871266706847
+        },
+        {
+          "iteration": 9,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.0329922080273
+        },
+        {
+          "iteration": 10,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.0325124999508
+        },
+        {
+          "iteration": 11,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.0306482090382
+        },
+        {
+          "iteration": 12,
+          "phase": "master",
+          "status": "limit",
+          "seconds": 300.0326057500206
+        }
+      ],
+      "bound_history": [
+        {
+          "iteration": 1,
+          "lower_bound_nondetection": 0.17175836331534453,
+          "upper_bound_nondetection": 0.2260575557286453,
+          "relative_optimality_gap": 0.24020074108241876
+        },
+        {
+          "iteration": 2,
+          "lower_bound_nondetection": 0.17175836331534453,
+          "upper_bound_nondetection": 0.2260575557286453,
+          "relative_optimality_gap": 0.24020074108241876
+        },
+        {
+          "iteration": 3,
+          "lower_bound_nondetection": 0.1717583633153462,
+          "upper_bound_nondetection": 0.2260575557286453,
+          "relative_optimality_gap": 0.24020074108241138
+        },
+        {
+          "iteration": 4,
+          "lower_bound_nondetection": 0.17176413198108975,
+          "upper_bound_nondetection": 0.2260575557286453,
+          "relative_optimality_gap": 0.2401752225115989
+        },
+        {
+          "iteration": 5,
+          "lower_bound_nondetection": 0.17176413198108975,
+          "upper_bound_nondetection": 0.2260575557286453,
+          "relative_optimality_gap": 0.2401752225115989
+        },
+        {
+          "iteration": 6,
+          "lower_bound_nondetection": 0.17176413198108975,
+          "upper_bound_nondetection": 0.2260575557286453,
+          "relative_optimality_gap": 0.2401752225115989
+        },
+        {
+          "iteration": 7,
+          "lower_bound_nondetection": 0.17177251236578053,
+          "upper_bound_nondetection": 0.1815765753254752,
+          "relative_optimality_gap": 0.05399409556062461
+        },
+        {
+          "iteration": 8,
+          "lower_bound_nondetection": 0.17457502318023874,
+          "upper_bound_nondetection": 0.1815765753254752,
+          "relative_optimality_gap": 0.03855977640665491
+        },
+        {
+          "iteration": 9,
+          "lower_bound_nondetection": 0.17458496851018382,
+          "upper_bound_nondetection": 0.1815765753254752,
+          "relative_optimality_gap": 0.03850500430883747
+        },
+        {
+          "iteration": 10,
+          "lower_bound_nondetection": 0.17458496851018382,
+          "upper_bound_nondetection": 0.1815765753254752,
+          "relative_optimality_gap": 0.03850500430883747
+        },
+        {
+          "iteration": 11,
+          "lower_bound_nondetection": 0.17458496851018382,
+          "upper_bound_nondetection": 0.1815765753254752,
+          "relative_optimality_gap": 0.03850500430883747
+        },
+        {
+          "iteration": 12,
+          "lower_bound_nondetection": 0.17458496851018382,
+          "upper_bound_nondetection": 0.1815765753254752,
+          "relative_optimality_gap": 0.03850500430883747
+        }
+      ],
+      "build_s": 75.02823187503964,
+      "terrain_weighting": true,
+      "total_budget_s": 3600.0
+    }
+  ],
+  "lane": "A",
+  "partial": false,
+  "elapsed_s": 22717.52173833293
+}

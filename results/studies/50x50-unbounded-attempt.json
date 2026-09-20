@@ -1,0 +1,22 @@
+{
+  "purpose": "셀=탐지폭(50x50) 에서 SPX 가 예산 없이 끝나지 않는다는 기록",
+  "grid": {
+    "n": 50,
+    "cells": 2500,
+    "cell_m": 398.0,
+    "time_slices": 59,
+    "particles": 50000,
+    "fingerprint": "002d4aaee13bfeeb"
+  },
+  "budget": {
+    "continuous_relaxation_iterations": 3,
+    "max_iterations": 6,
+    "master_time_limit_s": 300.0,
+    "note": "연속완화 LP 에는 시간 제한이 없다 — 여기서 막혔다."
+  },
+  "build_s": 1838,
+  "outcome": "solve 단계에서 24시간(CPU 13시간) 경과 후에도 반환 없음. 수동 중단.",
+  "elapsed": "01-00:03:05",
+  "cpu_time": "788:00.86",
+  "what_this_shows": "조밀 전이로는 빌드조차 불가능한 규모를 희소화로 빌드까지는 했으나(31분, 0.9GB), 절단평면의 연속완화 LP 가 이 규모(arc 이진변수 약 74만)에서 시간 제한 없이는 끝나지 않는다. 다음 측정은 모든 단계에 예산을 걸고 '선언한 예산 안에서 무엇을 얻었는가'로 보고해야 한다."
+}

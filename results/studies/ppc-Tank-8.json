@@ -1,0 +1,149 @@
+{
+  "terrain_seed": 20260201,
+  "rows": [
+    {
+      "n": 8,
+      "ppc": 25,
+      "particles": 1600,
+      "particle_seed": 20260201,
+      "worst_pd": 0.7443857545735293,
+      "per_target": [
+        0.7584467125351028,
+        0.7444451771092703,
+        0.7443857545735293
+      ],
+      "nonzero_cells": 11,
+      "cells": 64,
+      "fingerprint": "80417de457811cc1c3f1910e61ae2cbe987b68dce8f78d1aa67f7195c3034296",
+      "build_s": 20.53915016609244
+    },
+    {
+      "n": 8,
+      "ppc": 25,
+      "particles": 1600,
+      "particle_seed": 20260202,
+      "worst_pd": 0.7488948906124129,
+      "per_target": [
+        0.7570393435842797,
+        0.7488948906124129,
+        0.7489636332337339
+      ],
+      "nonzero_cells": 13,
+      "cells": 64,
+      "fingerprint": "51e166e398c1ad725aa8aa91a50d8869f5a0a2da780d6e270e41cdbd7af6d39c",
+      "build_s": 20.328001540969126
+    },
+    {
+      "n": 8,
+      "ppc": 25,
+      "particles": 1600,
+      "particle_seed": 20260203,
+      "worst_pd": 0.7447276270300676,
+      "per_target": [
+        0.746056464170521,
+        0.7447276270300676,
+        0.7459940885961144
+      ],
+      "nonzero_cells": 11,
+      "cells": 64,
+      "fingerprint": "d241ad047239d65d3c963781cc79b5b6706c7d42cdec31b71fe6dc0cc7a06d20",
+      "build_s": 20.34859524993226
+    },
+    {
+      "n": 8,
+      "ppc": 50,
+      "particles": 3200,
+      "particle_seed": 20260201,
+      "worst_pd": 0.7458923111787368,
+      "per_target": [
+        0.7515290580451205,
+        0.7458923111787368,
+        0.7477011402376454
+      ],
+      "nonzero_cells": 12,
+      "cells": 64,
+      "fingerprint": "d0a826757311f3e51a592923329a0d5e74ea7561104fbce88b71d1a27c734e22",
+      "build_s": 41.134637291077524
+    },
+    {
+      "n": 8,
+      "ppc": 50,
+      "particles": 3200,
+      "particle_seed": 20260202,
+      "worst_pd": 0.7506277162181403,
+      "per_target": [
+        0.7518710626125542,
+        0.7506277162181403,
+        0.7531143890768067
+      ],
+      "nonzero_cells": 12,
+      "cells": 64,
+      "fingerprint": "4a8006c59e00fe89f5995852ea45f699af0bda4bcdefccfb5aa37f2d5de51dad",
+      "build_s": 42.546156791970134
+    },
+    {
+      "n": 8,
+      "ppc": 50,
+      "particles": 3200,
+      "particle_seed": 20260203,
+      "worst_pd": 0.7444659196542498,
+      "per_target": [
+        0.7555932486015697,
+        0.7444659196542498,
+        0.745719469605165
+      ],
+      "nonzero_cells": 12,
+      "cells": 64,
+      "fingerprint": "e2ef2d030a4fba31d2b6b70568eae6c52b915b0eb2aafe06de4628da6e3d9c1b",
+      "build_s": 43.44102887506597
+    },
+    {
+      "n": 8,
+      "ppc": 100,
+      "particles": 6400,
+      "particle_seed": 20260201,
+      "worst_pd": 0.7457385351489628,
+      "per_target": [
+        0.7517488807528306,
+        0.7457385351489628,
+        0.7506603663685898
+      ],
+      "nonzero_cells": 13,
+      "cells": 64,
+      "fingerprint": "5df2c1babab6d078e8442dedff961da8e95b6d77a2e922b28136a12be996e7bb",
+      "build_s": 90.14471349993255
+    },
+    {
+      "n": 8,
+      "ppc": 100,
+      "particles": 6400,
+      "particle_seed": 20260202,
+      "worst_pd": 0.7454976051421032,
+      "per_target": [
+        0.753710540280696,
+        0.7454976051421032,
+        0.7457999139430445
+      ],
+      "nonzero_cells": 14,
+      "cells": 64,
+      "fingerprint": "af4aceef7dea8ffe1c5b218e70561b457c6704ebc1b6071a201ae5866c3729cb",
+      "build_s": 89.41892933298368
+    },
+    {
+      "n": 8,
+      "ppc": 100,
+      "particles": 6400,
+      "particle_seed": 20260203,
+      "worst_pd": 0.7462143078052512,
+      "per_target": [
+        0.7542896289681688,
+        0.7462143078052512,
+        0.7466937829155121
+      ],
+      "nonzero_cells": 15,
+      "cells": 64,
+      "fingerprint": "e94dbfcaa73f896573412eca7badbc994e47c2ee45a7785b347c5e4a3a9ff03f",
+      "build_s": 89.22545804199763
+    }
+  ]
+}

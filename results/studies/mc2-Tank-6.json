@@ -1,0 +1,61 @@
+{
+  "case": "Tank",
+  "n": 6,
+  "seed": 20260201,
+  "cells": 36,
+  "time_slices": 8,
+  "cell_side_m": 2961.3333333333335,
+  "sweep_width_m": 400.0,
+  "dt_s": 5.0,
+  "particles": 120000,
+  "plans": [
+    "plan"
+  ],
+  "cell_model_pd": [
+    0.5981219105220823
+  ],
+  "targets": [
+    {
+      "target": "MANEUVER_HEAVY",
+      "nondetection": [
+        0.5371888556527135
+      ],
+      "pd": [
+        0.46281114434728654
+      ],
+      "paired_se_vs_best": [
+        0.0
+      ],
+      "best_plan_index": 0,
+      "seconds": 409.87646275002044
+    },
+    {
+      "target": "STOP_HEAVY",
+      "nondetection": [
+        0.5791463649474663
+      ],
+      "pd": [
+        0.4208536350525337
+      ],
+      "paired_se_vs_best": [
+        0.0
+      ],
+      "best_plan_index": 0,
+      "seconds": 285.8807246250799
+    },
+    {
+      "target": "CONTINUOUS_MOVE",
+      "nondetection": [
+        0.49338841975976644
+      ],
+      "pd": [
+        0.5066115802402336
+      ],
+      "paired_se_vs_best": [
+        0.0
+      ],
+      "best_plan_index": 0,
+      "seconds": 332.7421810409287
+    }
+  ]
+}

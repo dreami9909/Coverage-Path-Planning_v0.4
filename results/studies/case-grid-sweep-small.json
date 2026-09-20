@@ -1,0 +1,18 @@
+{
+  "purpose": "per-case grid sweep (ingress 480s + search 600s, minimax over 3 IMM5 behaviours)",
+  "rows": [
+    {
+      "case": "TEL",
+      "n": 8,
+      "cells": 64,
+      "cell_m": 2487.5,
+      "T": 9,
+      "ppc": 46.875,
+      "worst_pd": 0.6435119774075507,
+      "gap": 0.004746463268824475,
+      "converged": true,
+      "iters": 3,
+      "runtime_s": 145.8275677919155
+    }
+  ]
+}

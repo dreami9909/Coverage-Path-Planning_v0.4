@@ -1,0 +1,71 @@
+{
+  "case": "Tank",
+  "n": 4,
+  "seed": 20260201,
+  "cells": 16,
+  "time_slices": 5,
+  "fingerprint": "49f6e4e8d488b4d84f828203f9dd89d1cbcdc26f5664cbd08e463229f3011205",
+  "start_cells": [
+    10,
+    10,
+    9,
+    9,
+    5,
+    6
+  ],
+  "worst_pd": 0.37861280584282764,
+  "lower_bound_nondetection": 0.6213215681624857,
+  "upper_bound_nondetection": 0.6213871941571724,
+  "gap": 0.00010561208100794099,
+  "certified": true,
+  "iterations": 9,
+  "master_time_limit_hits": 0,
+  "incumbent_source": "master-iteration-9",
+  "warm_start_nondetection": 0.6254501040018824,
+  "assignments": [
+    [
+      11,
+      11,
+      11,
+      11,
+      11
+    ],
+    [
+      6,
+      6,
+      5,
+      6,
+      6
+    ],
+    [
+      13,
+      13,
+      9,
+      5,
+      1
+    ],
+    [
+      10,
+      10,
+      6,
+      10,
+      10
+    ],
+    [
+      9,
+      9,
+      10,
+      9,
+      5
+    ],
+    [
+      5,
+      5,
+      1,
+      0,
+      0
+    ]
+  ],
+  "build_s": 361.9262682090048,
+  "runtime_s": 417.8415013339836
+}
