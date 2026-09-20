@@ -1,0 +1,181 @@
+{
+  "schema_version": 2,
+  "chapter": "4",
+  "question": "두 계획법의 경로를 실제로 비행시켜 IMM5 진리 앙상블에 대고 재면 무엇이 남는가",
+  "target_strata": [
+    "Tank-nominal",
+    "TEL-nominal"
+  ],
+  "target_stratum_weights": {
+    "Tank-nominal": 0.5,
+    "TEL-nominal": 0.5
+  },
+  "stone_spx": {
+    "planning_seeds": [
+      20260301,
+      20260302,
+      20260303,
+      20260304,
+      20260305,
+      20260306,
+      20260307,
+      20260308,
+      20260309,
+      20260310,
+      20260311,
+      20260312,
+      20260313,
+      20260314,
+      20260315,
+      20260316,
+      20260317,
+      20260318,
+      20260319,
+      20260320
+    ],
+    "evaluation_seed_limit": null,
+    "initial_position_ring_ratio": 0.45,
+    "initial_belief_delay_s": 480.0,
+    "terrain_families": [
+      "synthetic",
+      "control"
+    ],
+    "targets": [
+      {
+        "profile": "Tank-nominal"
+      },
+      {
+        "profile": "TEL-nominal"
+      }
+    ],
+    "searcher_classes": [
+      {
+        "name": "eo-ir-nominal",
+        "count": 6,
+        "hazard_scale": 1.0
+      }
+    ],
+    "evaluation_grid": {
+      "name": "square",
+      "grid_kind": "square",
+      "square_fit": "circumscribed",
+      "square_fit_note": "AOI 원을 완전히 덮는 외접 정사각형. 내접(v0.3 동작)은 원의 63.7% 만 덮어 480 s 뒤 TEL belief 의 20.07% 를 outside 흡수상태로 흘렸고, minimax 의 최악 표적이 TEL 이라 목적함수가 조용히 바뀌었다. 외접에서 누출은 1.27% 로, 이는 AOI 를 순변위 99% 로 잡은 데 따른 실제 이탈분이다.",
+      "grid_width": 10,
+      "grid_height": 10,
+      "time_slice_count": "auto",
+      "time_slice_note": "T = H*vc/c 로 유도한다 (셀 한 변 = 한 슬라이스 전진거리). 셀 수와 슬라이스 수를 따로 고르면 반드시 한쪽이 어긋난다 — 면적 기준과 길이 기준은 '셀 = 탐지폭' 에서만 일치한다.",
+      "particle_count": 5000,
+      "particle_note": "셀당 50. 입자 8 배(50->400) 에도 PD 변화가 0.0007~0.0026 으로 격자 한 단계 효과(0.05~0.08)의 1/30 이하였다.",
+      "sparse_transitions": "auto",
+      "hazard_calibration": "effective-sweep-width",
+      "cell_occupancy_limit": 1,
+      "forbid_opposing_edge_swaps": true,
+      "aggregate_identical_searchers": true,
+      "persistent_master": true,
+      "continuous_relaxation_iterations": 3,
+      "local_improvement_passes": 1,
+      "relative_tolerance": 0.01,
+      "mip_relative_gap": 0.0,
+      "max_iterations": 20,
+      "master_time_limit_s": 300.0,
+      "budget_note": "master 60 초는 이 규모에서 병목이었다. Tank 8x8 이 60 초x60 회에서 it8 이후 52 회를 헛돌고 gap 1.031% 로 실패했는데, 같은 인스턴스(fingerprint ec11f3d7c80daef0)를 300 초x20 회로 바꾸니 9 회 553 초에 0.835% 로 닫혔다 — 갭도 닫히고 6.5 배 빨라졌다. 예산은 반복이 아니라 master 시간에 넣어야 한다.",
+      "terrain_weighting_contrast": false,
+      "note": "Ch2 의 기준 격자. TEL 10x10(셀 1,990 m)·Tank 8x8(셀 2,221 m)이 seed 3 개 전부 1% 이내로 인증된 상한이다. 케이스마다 AOI 가 다르므로 같은 n 이라도 물리 셀 크기는 다르다."
+    },
+    "searcher_note": "6대 모두 정상기 (2026-09-13). 동일 탐색자라 등급 집계(논문의 등급별 정수 arc flow)로 순열 대칭 720개를 제거한다.",
+    "target_hazard_from_signature": true,
+    "target_note": "표적별 hazard 배율은 config 숫자가 아니라 시그니처(공간 탐지모델 W)에서 유도한다: Tank 0.874, TEL 0.867.",
+    "grid_conditions": [
+      {
+        "name": "square",
+        "grid_kind": "square",
+        "square_fit": "circumscribed",
+        "square_fit_note": "AOI 원을 완전히 덮는 외접 정사각형. 내접(v0.3 동작)은 원의 63.7% 만 덮어 480 s 뒤 TEL belief 의 20.07% 를 outside 흡수상태로 흘렸고, minimax 의 최악 표적이 TEL 이라 목적함수가 조용히 바뀌었다. 외접에서 누출은 1.27% 로, 이는 AOI 를 순변위 99% 로 잡은 데 따른 실제 이탈분이다.",
+        "grid_width": 10,
+        "grid_height": 10,
+        "time_slice_count": "auto",
+        "time_slice_note": "T = H*vc/c 로 유도한다 (셀 한 변 = 한 슬라이스 전진거리). 셀 수와 슬라이스 수를 따로 고르면 반드시 한쪽이 어긋난다 — 면적 기준과 길이 기준은 '셀 = 탐지폭' 에서만 일치한다.",
+        "particle_count": 5000,
+        "particle_note": "셀당 50. 입자 8 배(50->400) 에도 PD 변화가 0.0007~0.0026 으로 격자 한 단계 효과(0.05~0.08)의 1/30 이하였다.",
+        "sparse_transitions": "auto",
+        "hazard_calibration": "effective-sweep-width",
+        "cell_occupancy_limit": 1,
+        "forbid_opposing_edge_swaps": true,
+        "aggregate_identical_searchers": true,
+        "persistent_master": true,
+        "continuous_relaxation_iterations": 3,
+        "local_improvement_passes": 1,
+        "relative_tolerance": 0.01,
+        "mip_relative_gap": 0.0,
+        "max_iterations": 20,
+        "master_time_limit_s": 300.0,
+        "budget_note": "master 60 초는 이 규모에서 병목이었다. Tank 8x8 이 60 초x60 회에서 it8 이후 52 회를 헛돌고 gap 1.031% 로 실패했는데, 같은 인스턴스(fingerprint ec11f3d7c80daef0)를 300 초x20 회로 바꾸니 9 회 553 초에 0.835% 로 닫혔다 — 갭도 닫히고 6.5 배 빨라졌다. 예산은 반복이 아니라 master 시간에 넣어야 한다.",
+        "terrain_weighting_contrast": false,
+        "note": "Ch2 의 기준 격자. TEL 10x10(셀 1,990 m)·Tank 8x8(셀 2,221 m)이 seed 3 개 전부 1% 이내로 인증된 상한이다. 케이스마다 AOI 가 다르므로 같은 n 이라도 물리 셀 크기는 다르다."
+      }
+    ],
+    "cases": [
+      {
+        "name": "TEL",
+        "signature_profile": "TEL-nominal",
+        "search_radius_m": 9950.0,
+        "aoi_note": "이송 480 s + 탐색 600 s = 1,080 s 순변위 99%, 이 케이스의 **최악 거동**(RELOCATION_HEAVY) 기준.",
+        "targets": [
+          {
+            "behavior": "RELOCATION_HEAVY",
+            "note": "발사 후 급히 이탈"
+          },
+          {
+            "behavior": "CONTINUOUS_MOVE",
+            "note": "꾸준히 이동"
+          },
+          {
+            "behavior": "STOP_HEAVY",
+            "note": "숨어서 정지"
+          }
+        ],
+        "certified_grid_width": 10,
+        "certified_grid_note": "이 케이스가 seed 3 개 전부 1% 이내로 인증된 최대 격자. 케이스마다 AOI 가 다르므로 같은 n 이라도 물리 셀 크기는 다르다."
+      },
+      {
+        "name": "Tank",
+        "signature_profile": "Tank-nominal",
+        "search_radius_m": 8884.0,
+        "aoi_note": "이송 480 s + 탐색 600 s = 1,080 s 순변위 99%, 이 케이스의 최악 거동(CONTINUOUS_MOVE) 기준.",
+        "targets": [
+          {
+            "behavior": "MANEUVER_HEAVY",
+            "note": "기동"
+          },
+          {
+            "behavior": "STOP_HEAVY",
+            "note": "정지"
+          },
+          {
+            "behavior": "CONTINUOUS_MOVE",
+            "note": "이동"
+          }
+        ],
+        "certified_grid_width": 8,
+        "certified_grid_note": "이 케이스가 seed 3 개 전부 1% 이내로 인증된 최대 격자. 케이스마다 AOI 가 다르므로 같은 n 이라도 물리 셀 크기는 다르다."
+      }
+    ],
+    "evaluation_grid_note": "Ch2 가 인증한 격자에서 평가한다. 인증이 없는 격자에서 실비행 성능을 재면 '이 계획이 얼마나 좋은가' 를 말할 기준이 사라진다.",
+    "initial_position_note": "AOI 반경의 45% 고리에 6대를 60도 간격으로. 100 km 를 함께 이송한 6대가 TP 에 도착할 때 표적은 이미 반경 수 km 로 퍼져 있으므로, 한 점에 모이지 않고 그 영역을 나눠 맡는다. 2026-09-17 에 0.0(TP 한 점)을 시험했으나 구조적으로 실행 불가다 — T = H*vc/c 규칙이 도달거리/셀 비를 1.14 로 고정해 한 셀의 후속이 항상 5개(자기+직교4)인데, 6대가 점유한도 1 로 서로 다른 목적지를 요구하기 때문. 격자 크기와 무관하게 성립하는 제약이다."
+  },
+  "mappo": {
+    "iterations": 80,
+    "rollouts_per_iteration": 8,
+    "hidden_size": 64,
+    "actor_learning_rate": 0.0005,
+    "critic_learning_rate": 0.001,
+    "epochs": 4,
+    "environment": {
+      "action_count": 9,
+      "worst_target_temperature": 0.05,
+      "terminal_weight": 10.0,
+      "slice_weight": 20.0,
+      "repair_penalty": 0.05
+    }
+  }
+}

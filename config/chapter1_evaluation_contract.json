@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "chapter": "1",
+  "question": "이후 두 계획법을 비교하기 전에 무엇을 동일하게 고정해야 하는가",
+  "declares": [
+    "소인폭 표 W = ∫P_D(x)dx (표적·채널별)",
+    "탐색기 스펙 (SR-Z50 기하, weave, 트랙 간격, 실제 비행거리)",
+    "표적 프로파일 (Tank/TEL 시그니처 + IMM5 5모드)",
+    "P_D/P_F 증거 계약 (센서 보고 -> 로그오즈 증분)",
+    "Monte Carlo 설계 (표본수·seed·신뢰수준·추론방식)",
+    "KPI 정의 (5개 순위지표 + 진단지표)"
+  ],
+  "note": "조건값 자체는 common_experiment.json 이 단일 출처다. 이 파일은 Chapter 1 이 그 중 무엇을 보고하는지만 선언한다.",
+  "motion_sensitivity": {
+    "sample_count": 1500,
+    "note": "step_s / halt_probability_boost 는 근거가 확정되지 않은 모델링 상수다. 값을 주장하는 대신 이 범위에서 결론이 바뀌지 않음을 보인다."
+  }
+}

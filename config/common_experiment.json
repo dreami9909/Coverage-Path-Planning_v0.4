@@ -1,0 +1,298 @@
+{
+  "schema_version": 2,
+  "chapter": "common",
+  "target_profiles": [
+    {
+      "name": "Tank-nominal",
+      "motion_model": "IMM5",
+      "calibration_status": "A-grade modeling assumption; target track calibration pending"
+    },
+    {
+      "name": "TEL-nominal",
+      "motion_model": "IMM5",
+      "calibration_status": "A-grade modeling assumption; target track calibration pending"
+    }
+  ],
+  "target_motion": {
+    "status": "A-grade modeling assumption; doctrine/intel validation pending",
+    "step_s": 30.0,
+    "step_s_note": "임무 480초를 이 간격으로 이산화한다. 30초면 모드 전이가 16번이다.",
+    "mode_names": [
+      "HALT",
+      "LOW_CV",
+      "HIGH_CV",
+      "CTRV",
+      "MANEUVER"
+    ],
+    "assignment": {
+      "Tank-nominal": "MANEUVER_HEAVY",
+      "TEL-nominal": "RELOCATION_HEAVY",
+      "note": "Tank는 교전·엄폐 이동(정지·선회 잦음), TEL은 shoot-and-scoot(고속 직선 이탈). 두 표적이 같은 거동을 쓰면 Tank/TEL별 평가가 센서 시그니처 차이만 재게 된다."
+    },
+    "behaviour_profiles": {
+      "MANEUVER_HEAVY": {
+        "description": "Frequent turning and irregular but temporally correlated movement",
+        "mode_probabilities": [
+          0.15,
+          0.15,
+          0.1,
+          0.35,
+          0.25
+        ],
+        "persistence_alpha": 0.45,
+        "process_noise_scale": 1.75,
+        "turn_rate_scale": 1.5,
+        "mode_speed_bounds_kph": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            2,
+            32
+          ],
+          [
+            0,
+            40
+          ]
+        ]
+      },
+      "RELOCATION_HEAVY": {
+        "description": "Sustained faster relocation with occasional turns and halts",
+        "mode_probabilities": [
+          0.05,
+          0.1,
+          0.65,
+          0.15,
+          0.05
+        ],
+        "persistence_alpha": 0.65,
+        "process_noise_scale": 0.75,
+        "turn_rate_scale": 0.75,
+        "mode_speed_bounds_kph": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            2,
+            32
+          ],
+          [
+            0,
+            40
+          ]
+        ]
+      },
+      "MIXED_GROUND": {
+        "description": "Aggregate nominal prior over four ground-motion stress scenarios",
+        "mode_probabilities": [
+          0.2125,
+          0.1875,
+          0.3125,
+          0.1875,
+          0.1
+        ],
+        "persistence_alpha": 0.6375,
+        "process_noise_scale": 1.0625,
+        "turn_rate_scale": 1.0,
+        "mode_speed_bounds_kph": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            20
+          ],
+          [
+            20,
+            40
+          ],
+          [
+            2,
+            32
+          ],
+          [
+            0,
+            40
+          ]
+        ]
+      }
+    },
+    "terrain_coupling": {
+      "bias_strength": 0.6,
+      "offroad_probability": 0.2,
+      "halt_probability_boost": 0.35,
+      "note": "halt boost는 은폐지에서 정지확률을 올린다. 0.35이면 HALT 점유가 21%->30%로 오르고 앙상블 평균속도가 14% 떨어진다. 근거 미확립이라 민감도 대상."
+    },
+    "truth_boundary_mode": "open",
+    "truth_boundary_note": "진리 궤적은 AOI 경계에서 끊지 않는다. 끊으면 '표적이 실제로 어디까지 가는가'를 관측할 수 없고, 그 관측이 AOI 크기의 근거다. 탐지 실패 판정은 별도로 마지막 위치가 AOI 밖인지로 한다."
+  },
+  "aoi": {
+    "sizing_rule": "per-target net-displacement containment at ingress+search",
+    "containment": 0.99,
+    "note": "AOI 는 TP 중심이고 **표적별로 따로** 잡는다. 30분(운용 상한)에서 Tank 와 TEL 은 질적으로 다른 문제가 된다 — TEL 은 퍼지는 속도가 소인 능력을 앞질러 한 목적함수(minimax)로 묶으면 못 잡는 표적에 자원을 몰아주게 된다. 반경은 이송+탐색(=1,080 s) 순변위 99% 로 잡아 belief 를 인위적으로 버리지 않는다. 어디를 포기할지는 격자가 아니라 planner 가 정한다.",
+    "cue_ring": {
+      "kind": "tp-centered",
+      "sigma_m": 500.0,
+      "reference_radius_m": 3333.3333333333335,
+      "note": "2026-09-13: moving-ring(2167±500) -> tp-centered(sigma 500 m). 표적은 TP 근처에 있고 TP 정보 오차가 500 m 다. 절대 미터로 둔다.",
+      "status": "A-grade modeling assumption; cueing sensor accuracy pending"
+    },
+    "measured": {
+      "rule": "net-displacement containment",
+      "containment": 0.99,
+      "horizon_s": 1080.0,
+      "ingress_s": 480.0,
+      "search_s": 600.0,
+      "sample_count": 6000,
+      "seed": 20260201,
+      "search_start_radius_m": {
+        "tank": 3193.0,
+        "tel": 4846.0
+      },
+      "per_profile_radius_m": {
+        "tank": 5833.0,
+        "tel": 9904.0
+      },
+      "superseded": {
+        "horizon_s": 480.0,
+        "required_search_radius_m": 4784.0,
+        "why": "이송 480 s 동안의 표적 확산이 빠져 있었다 (탐색 시작 belief 를 sigma 500 m 로 뒀다)."
+      },
+      "note": "2026-09-14 재측정. 표적별로 쓴다 — 단일 AOI 로 합치지 않는다."
+    }
+  },
+  "sensor": {
+    "template": "SR-Z50",
+    "altitude_m": 600.0,
+    "eo_resolution": [
+      1280,
+      720
+    ],
+    "ir_resolution": [
+      1280,
+      720
+    ],
+    "fused_search_hfov_deg": 18.0,
+    "frame_rate_hz": 30.0,
+    "gimbal_max_angle_deg": 45.0,
+    "gimbal_max_rate_dps": 60.0,
+    "gimbal_scan_rate_dps": 30.0
+  },
+  "detection": {
+    "reference_detection_probability": 0.86,
+    "false_alarm_probability": 0.05,
+    "status": "A-grade modeling assumption; calibration flight test required",
+    "note": "feeds the log-odds evidence increments log(Pd/Pf) and log((1-Pd)/(1-Pf))"
+  },
+  "system_search_envelope": {
+    "total_width_m": 800.0,
+    "support_half_width_m": 400.0,
+    "vehicle_weave_half_amplitude_m": 100.0,
+    "vehicle_weave_wavelength_m": 800.0,
+    "seeker_half_width_m": 300.0,
+    "lateral_curve": "raised_cosine",
+    "calibration_status": "decomposition is an explicit initial assumption",
+    "important": "발자국 전폭 800 m = 지지반폭 +-400 m. seeker 300 m + weave 진폭 100 m = 400 m. W = integral(PD(x) dx) 이므로 800 m 가 아니라 그보다 작다."
+  },
+  "mission": {
+    "uav_count": 6,
+    "search_radius_m": 4784.0,
+    "mission_time_s": 600.0,
+    "transit_speed_kph": 160.0,
+    "search_speed_kph": 160.0,
+    "target_max_speed_kph": 40.0,
+    "mission_time_note": "2026-09-14 구조 변경. 임무는 두 단계다. (1) 이송: UAV 6대가 발사대에서 TP 까지 100 km 를 480 s 에 난다(750 kph). 이 동안 표적은 계속 움직이므로, 탐색이 시작되는 시점의 belief 는 TP 중심이 아니라 480 s 확산분포다 (stone_spx.initial_belief_delay_s). (2) 탐색: TP 도착 후 160 kph + weave 로 mission_time_s 동안 탐색한다. 운용 상한은 search_time_max_s(30분)이고, 본 실험은 600 s 구간을 본다 — 목적이 '빨리 찾기'라 탐지의 대부분이 일어나는 초반을 본다. 이전 480 s 단일단계 설정은 이송 확산을 누락했으므로 그 조건의 결과는 폐기한다.",
+    "speed_note": "이송 750 kph, 탐색 160 kph + weave (중심선 39.0 m/s). 2026-09-14.",
+    "ingress_s": 480.0,
+    "ingress_speed_kph": 750.0,
+    "ingress_distance_km": 100.0,
+    "search_time_max_s": 1800.0
+  },
+  "belief": {
+    "evidence_map": "binary log-odds occupancy",
+    "allocation_map": "normalized single-target location probability",
+    "fusion": "observation-ID deduplicated log-odds increments"
+  },
+  "monte_carlo": {
+    "sample_count": 1000,
+    "base_seed": 20260830,
+    "report_confidence": 0.95
+  },
+  "reliability": {
+    "design_unit": "independent planning/evaluation seed cluster",
+    "confidence": 0.95,
+    "bootstrap_resamples": 5000,
+    "minimum_seed_count": 20,
+    "minimum_samples_per_seed": 1000,
+    "maximum_detection_ci_half_width": 0.03,
+    "maximum_restricted_time_ci_half_width_s": 10.0,
+    "maximum_coverage_ci_half_width": 0.02,
+    "maximum_detection_change": 0.01,
+    "maximum_restricted_time_change_s": 5.0,
+    "sample_checkpoints": [
+      100,
+      300,
+      1000
+    ],
+    "seed_checkpoints": [
+      5,
+      10,
+      20
+    ],
+    "note": "target trajectories are nested within a seed; they do not replace independent terrain, belief, route, and communication seeds"
+  },
+  "kpi": [
+    "unique_area_coverage_ratio",
+    "probability_mass_coverage",
+    "detection_probability_within_limit",
+    "conditional_mean_detection_time_s",
+    "restricted_mean_detection_time_s",
+    "failure_rate_within_limit",
+    "coverage_redundancy_ratio",
+    "mean_route_distance_m",
+    "max_route_distance_m",
+    "team_total_distance_m",
+    "centerline_vs_actual_woven_distance_m"
+  ],
+  "motion_sensitivity": {
+    "enabled": true,
+    "sample_count": 800,
+    "profiles": [
+      "tank",
+      "tel"
+    ],
+    "steps_s": [
+      30.0,
+      10.0,
+      5.0
+    ],
+    "halt_boosts": [
+      0.0,
+      0.15,
+      0.35,
+      0.5
+    ],
+    "_note": "step_s 와 halt_probability_boost 는 둘 다 근거가 확립되지 않은 모델링 상수다 (terrain_coupling.note 참조). 값을 주장하는 대신 이 범위에서 AOI 결정이 뒤집히지 않는다는 것을 보인다. tools/size_aoi.py 가 재던 것과 같은 측정이고, 결과에 남기지 않으면 Ch0 민감도 그림 3장(step-sensitivity / halt-sensitivity / aoi-containment)이 데이터가 없어 만들어지지 않는다 — 실제로 그 상태였다.",
+    "_sample_count_note": "도구 기본값은 4000 이고 그때 약 2분 걸린다. 챕터 안에서는 800 으로 줄였다. 분위수는 p99 까지만 읽으므로 800 표본이면 꼬리 8개다 — AOI 반경을 확정하는 값은 tools/size_aoi.py --apply 로 4000 표본에서 재고, 챕터 쪽 숫자는 '설정된 반경이 여전히 타당한가'를 보는 용도다."
+  },
+  "purpose": "Chapter 1-4 가 공유하는 조건. 여기 없는 값은 어느 챕터도 쓰지 않는다."
+}

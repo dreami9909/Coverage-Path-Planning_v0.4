@@ -1,0 +1,148 @@
+{
+  "schema_version": 2,
+  "chapter": "2",
+  "question": "지형 가중이 최적 경로를 바꾸는가, 그리고 최적성을 어디까지 증명할 수 있는가",
+  "stone_spx": {
+    "planning_seeds": [
+      20260201,
+      20260202,
+      20260203,
+      20260204,
+      20260205,
+      20260206,
+      20260207,
+      20260208,
+      20260209,
+      20260210,
+      20260211,
+      20260212,
+      20260213,
+      20260214,
+      20260215,
+      20260216,
+      20260217,
+      20260218,
+      20260219,
+      20260220
+    ],
+    "initial_position_ring_ratio": 0.45,
+    "initial_belief_delay_s": 480.0,
+    "terrain_weighting_contrast": true,
+    "searcher_classes": [
+      {
+        "name": "eo-ir-nominal",
+        "count": 6,
+        "hazard_scale": 1.0
+      }
+    ],
+    "certificate": {
+      "required_relative_gap": 0.01,
+      "note": "사전 선언값. 계획 seed 전부가 통과해야 통과다. 결과를 보고 이 값을 올리면 인증 주장이 무효가 된다."
+    },
+    "grid_conditions": [
+      {
+        "name": "square",
+        "grid_kind": "square",
+        "square_fit": "circumscribed",
+        "square_fit_note": "AOI 원을 완전히 덮는 외접 정사각형. 내접(v0.3 동작)은 원의 63.7% 만 덮어 480 s 뒤 TEL belief 의 20.07% 를 outside 흡수상태로 흘렸고, minimax 의 최악 표적이 TEL 이라 목적함수가 조용히 바뀌었다. 외접에서 누출은 1.27% 로, 이는 AOI 를 순변위 99% 로 잡은 데 따른 실제 이탈분이다.",
+        "grid_width": 10,
+        "grid_height": 10,
+        "time_slice_count": "auto",
+        "time_slice_note": "T = H*vc/c 로 유도한다 (셀 한 변 = 한 슬라이스 전진거리). 셀 수와 슬라이스 수를 따로 고르면 반드시 한쪽이 어긋난다 — 면적 기준과 길이 기준은 '셀 = 탐지폭' 에서만 일치한다.",
+        "particle_count": 5000,
+        "particle_note": "셀당 50. 입자 8 배(50->400) 에도 PD 변화가 0.0007~0.0026 으로 격자 한 단계 효과(0.05~0.08)의 1/30 이하였다.",
+        "sparse_transitions": "auto",
+        "hazard_calibration": "effective-sweep-width",
+        "cell_occupancy_limit": 1,
+        "forbid_opposing_edge_swaps": true,
+        "aggregate_identical_searchers": true,
+        "persistent_master": true,
+        "continuous_relaxation_iterations": 3,
+        "local_improvement_passes": 1,
+        "relative_tolerance": 0.01,
+        "mip_relative_gap": 0.0,
+        "max_iterations": 20,
+        "master_time_limit_s": 300.0,
+        "budget_note": "master 300 s x 20 회. 2026-09-20 동일 총예산(3,600 s) 배분 실험 12 건으로 재측정했다. 주문제당 허용 시간과 반복 횟수의 배분은 최적성 간격에 비단조로 작용한다 — 반복이 너무 적으면(600 s x 6) 절단이 부족해 주문제가 초기해를 전혀 개선하지 못하고(3 시드 중 2 시드에서 incumbent_source=warm-start), 반복이 너무 많으면(60 s x 60) 주문제가 매번 한도에 걸려 쌍대 한계가 약해진다. 중간 구간(master 180~300 s)은 서로 구분되지 않았다(차이가 재실행 변동 이내). 주의: 동일 조건 재실행의 간격 변동이 2.19%p 이고 belief 입자 표본 변동이 탐지확률 0.005~0.010 이므로, 기준 1% 부근의 인증은 단일 실행으로 확정할 수 없다. 원자료 results/studies/budget-alloc-Tank-10-T3600-lane{A,B}.json, ppc-Tank-{8,14}.json.",
+        "terrain_weighting_contrast": false,
+        "note": "Ch2 의 기준 격자. TEL 10x10(셀 1,990 m)·Tank 8x8(셀 2,221 m)이 seed 3 개 전부 1% 이내로 인증된 상한이다. 케이스마다 AOI 가 다르므로 같은 n 이라도 물리 셀 크기는 다르다."
+      }
+    ],
+    "initial_position_note": "AOI 반경의 45% 고리에 6대를 60도 간격으로. 100 km 를 함께 이송한 6대가 TP 에 도착할 때 표적은 이미 반경 수 km 로 퍼져 있으므로, 한 점에 모이지 않고 그 영역을 나눠 맡는다. 2026-09-17 에 0.0(TP 한 점)을 시험했으나 구조적으로 실행 불가다 — T = H*vc/c 규칙이 도달거리/셀 비를 1.14 로 고정해 한 셀의 후속이 항상 5개(자기+직교4)인데, 6대가 점유한도 1 로 서로 다른 목적지를 요구하기 때문. 격자 크기와 무관하게 성립하는 제약이다.",
+    "planning_seed_note": "측정은 seed 3 개로 했다. 선언 기준이 '계획 seed 전부 통과' 이고 최악 gap 이 0.903%/0.977% 로 기준 1% 에 바짝 붙어 있으므로, 이 값을 늘리면 결과가 달라질 수 있다 — 인용할 때 seed 수를 함께 밝혀야 한다.",
+    "searcher_note": "6대 모두 정상기 (2026-09-13). 동일 탐색자라 등급 집계(논문의 등급별 정수 arc flow)로 순열 대칭 720개를 제거한다.",
+    "target_hazard_from_signature": true,
+    "target_note": "표적별 hazard 배율은 config 숫자가 아니라 시그니처(공간 탐지모델 W)에서 유도한다: Tank 0.874, TEL 0.867.",
+    "initial_belief_delay_note": "이송 480 s. 탐색이 시작될 때 표적은 이미 퍼져 있다 — belief 를 이만큼 predict 한 뒤 계획을 시작한다. 0.0 이면 표적이 TP 에 있다고 보는 것이라 문제가 실제보다 훨씬 쉬워진다.",
+    "per_target_instances": true,
+    "per_target_note": "표적마다 자기 AOI·격자·인스턴스를 갖는다. minimax 로 묶지 않는다 (aoi.note 참조). 결과도 표적별로 보고한다.",
+    "cases": [
+      {
+        "name": "TEL",
+        "signature_profile": "TEL-nominal",
+        "search_radius_m": 9950.0,
+        "aoi_note": "이송 480 s + 탐색 600 s = 1,080 s 순변위 99%, 이 케이스의 **최악 거동**(RELOCATION_HEAVY) 기준.",
+        "targets": [
+          {
+            "behavior": "RELOCATION_HEAVY",
+            "note": "발사 후 급히 이탈"
+          },
+          {
+            "behavior": "CONTINUOUS_MOVE",
+            "note": "꾸준히 이동"
+          },
+          {
+            "behavior": "STOP_HEAVY",
+            "note": "숨어서 정지"
+          }
+        ],
+        "certified_grid_width": 10,
+        "certified_grid_note": "이 케이스가 seed 3 개 전부 1% 이내로 인증된 최대 격자. 케이스마다 AOI 가 다르므로 같은 n 이라도 물리 셀 크기는 다르다."
+      },
+      {
+        "name": "Tank",
+        "signature_profile": "Tank-nominal",
+        "search_radius_m": 8884.0,
+        "aoi_note": "이송 480 s + 탐색 600 s = 1,080 s 순변위 99%, 이 케이스의 최악 거동(CONTINUOUS_MOVE) 기준.",
+        "targets": [
+          {
+            "behavior": "MANEUVER_HEAVY",
+            "note": "기동"
+          },
+          {
+            "behavior": "STOP_HEAVY",
+            "note": "정지"
+          },
+          {
+            "behavior": "CONTINUOUS_MOVE",
+            "note": "이동"
+          }
+        ],
+        "certified_grid_width": 8,
+        "certified_grid_note": "이 케이스가 seed 3 개 전부 1% 이내로 인증된 최대 격자. 케이스마다 AOI 가 다르므로 같은 n 이라도 물리 셀 크기는 다르다."
+      }
+    ],
+    "cases_note": "2026-09-14. 케이스마다 **그 표적이 보일 법한 IMM5 거동 3종**을 두고 minimax 로 최악 거동을 기준으로 계획한다 — 'TEL 이 나갔다는 건 알지만 어떻게 기동할지는 모른다'를 그대로 표현한다. 표적 이동은 오직 imm5_behavior 가 결정하고 시그니처는 탐지 난이도에만 영향을 준다(Tank 0.874 vs TEL 0.867, 0.76% 차이). 그래서 두 케이스에 같은 거동 집합을 주면 쌍둥이 실험이 되어 분리한 의미가 사라진다. 거동 배정은 교리 판단이며 2026-09-14 사용자가 확정했다.",
+    "superseded_targets_note": "케이스 구조로 대체됨. 이전에는 Tank-nominal/TEL-nominal 각 1개를 한 minimax 에 묶었다.",
+    "certified_grids": {
+      "TEL": {
+        "grid": "10x10",
+        "cell_m": 1990.0,
+        "time_slices": 12,
+        "detection_mean": 0.7328,
+        "worst_gap": 0.009033,
+        "seeds": 3
+      },
+      "Tank": {
+        "grid": "8x8",
+        "cell_m": 2221.0,
+        "time_slices": 11,
+        "detection_mean": 0.7465,
+        "worst_gap": 0.009766,
+        "seeds": 3
+      },
+      "note": "2026-09-16 측정. src/cpp_search/research/experiments/ch2_studies.py 의 seed_replication 으로 재현한다. 이 값을 인용할 때는 seed 3 개 조건을 함께 밝혀야 한다 — 최악 gap 이 기준 1% 에 바짝 붙어 있다."
+    },
+    "planning_seed_limit": 3
+  }
+}
