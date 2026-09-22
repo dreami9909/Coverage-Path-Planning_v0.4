@@ -1,6 +1,6 @@
 # Cooperative Target Search — Stone SPX + MAPPO (v0.4)
 
-Tank/TEL 표적을 6대의 무인기로 찾는 문제에서, **경로제약 다중에이전트 탐색
+실종자를 6대의 무인기로 찾는 문제에서, **경로제약 다중에이전트 탐색
 최적화**를 두 방법으로 풀고 같은 자로 재는 연구 코드다.
 
     Stone, Royset & Washburn (2016) 4장 SPX     최적성 인증 O, 확장 X
